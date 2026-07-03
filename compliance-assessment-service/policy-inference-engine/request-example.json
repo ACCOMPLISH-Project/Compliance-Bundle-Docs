@@ -1,0 +1,82 @@
+{
+  "requestId": "compliance-check-001",
+  "checkedPolicies": [
+    "gdpr-article-15",
+    "gdpr-article-20"
+  ],
+  "system": {
+    "systemId": "test-system-001",
+    "characteristics": {
+      "actions": [
+        "obtain",
+        "transfer"
+      ],
+      "makeAvailable": true,
+      "makeAvailableDuty": true,
+      "transfer": true,
+      "review": true,
+      "notify": true,
+      "establishedCommunicationChannels": [
+        "electronic",
+        "paper"
+      ],
+      "documentedProcedures": "proceduresForResponsesAndNotifications",
+      "technicalOrganisationalMeasures": [
+        "dataTransferRecord",
+        "dataProcessingRecord",
+        "dataTransferTool"
+      ],
+      "dataSource": "dataSubjectDataSource",
+      "payAmount": 20000000.0,
+      "completeness": 1,
+      "availability": true,
+      "understandability": 1,
+      "conciseness": 1,
+      "accuracy": 1,
+      "humanInvolvement": "humanInvolvementForVerification",
+      "categoriesOfPersonalData": [
+        "personalData",
+        "sensitivePersonalData",
+        "specialCategoryPersonalData"
+      ],
+      "justifications": [
+        "automatedDecisionLogic",
+        "dataTransfersOutsideEU",
+        "complexityOfProcess"
+      ],
+      "recipients": [
+        "dataSubject"
+      ],
+      "status": "requestActionCompleted",
+      "time": "P1M",
+      "impact": "noImpact",
+      "legalBases": [
+        "a61A",
+        "jointDataControllersAgreement"
+      ],
+      "mediaTypes": [
+        "application/json",
+        "text/csv"
+      ],
+      "technicalMeasures": [
+        "accessControlMethod",
+        "encryption",
+        "activityMonitoring",
+        "authorisationProtocols",
+        "securityMethod",
+        "api"
+      ],
+      "dataControllers": [
+        "datacontroller",
+        "destinationdatacontroller"
+      ],
+      "impactOnDataSubjectOrDataSubjectGroup": "impactHarmful",
+      "dqvJustifications": [
+        "delayJustification"
+      ]
+    }
+  },
+  "options": {
+    "decisionView": "detailed"
+  }
+}

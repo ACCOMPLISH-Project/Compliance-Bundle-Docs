@@ -1,0 +1,1335 @@
+{
+  "version": "0.0.1",
+  "generatedFromPolicies": [
+    {
+      "id": "https://accomplish.org/policies/gdpr-policies/gdpr-article_15",
+      "title": "GDPR Article 15 — Right of Access",
+      "sourceFile": "gdpr-article-15.jsonld"
+    },
+    {
+      "id": "https://accomplish.org/policies/gdpr-policies/gdpr-article_20",
+      "title": "GDPR Article 20 — Right to Data Portability",
+      "sourceFile": "gdpr-article-20.jsonld"
+    }
+  ],
+  "fields": [
+    {
+      "key": "accuracy",
+      "type": "number",
+      "description": "Derived generically from ODRL operand(s).",
+      "required": true,
+      "possibleValues": [],
+      "provenance": {
+        "x-operands": [
+          "dqv:Accuracy"
+        ],
+        "x-policyIds": [
+          "https://accomplish.org/policies/gdpr-policies/gdpr-article_15"
+        ],
+        "x-appliesTo": "duty",
+        "evaluatedAgainst": [
+          {
+            "rule": "duty",
+            "operator": "eq",
+            "value": 1,
+            "policyId": "https://accomplish.org/policies/gdpr-policies/gdpr-article_15",
+            "action": "dpv:MakeAvailable",
+            "contextPath": "policy.permission[0].duty[1].constraint[4]",
+            "operand": "dqv:Accuracy"
+          }
+        ],
+        "valueMappings": []
+      }
+    },
+    {
+      "key": "actions",
+      "type": "array",
+      "description": "Derived generically from ODRL operand(s).",
+      "required": true,
+      "possibleValues": [
+        "access",
+        "obtain",
+        "transfer"
+      ],
+      "provenance": {
+        "x-operands": [
+          "actions"
+        ],
+        "x-policyIds": [
+          "https://accomplish.org/policies/gdpr-policies/gdpr-article_15",
+          "https://accomplish.org/policies/gdpr-policies/gdpr-article_20"
+        ],
+        "x-appliesTo": "permission",
+        "evaluatedAgainst": [
+          {
+            "rule": "permission",
+            "operator": "isAnyOf",
+            "value": [
+              "access"
+            ],
+            "policyId": "https://accomplish.org/policies/gdpr-policies/gdpr-article_15",
+            "action": null,
+            "contextPath": "policy.permission[*].action",
+            "operand": "actions"
+          },
+          {
+            "rule": "permission",
+            "operator": "isAnyOf",
+            "value": [
+              "obtain"
+            ],
+            "policyId": "https://accomplish.org/policies/gdpr-policies/gdpr-article_20",
+            "action": null,
+            "contextPath": "policy.permission[*].action",
+            "operand": "actions"
+          },
+          {
+            "rule": "permission",
+            "operator": "isAnyOf",
+            "value": [
+              "obtain",
+              "transfer"
+            ],
+            "policyId": "https://accomplish.org/policies/gdpr-policies/gdpr-article_20",
+            "action": null,
+            "contextPath": "policy.permission[*].action",
+            "operand": "actions"
+          }
+        ],
+        "valueMappings": [
+          {
+            "apiValue": "access",
+            "policyValue": "dpv:Access"
+          },
+          {
+            "apiValue": "obtain",
+            "policyValue": "dpv:Obtain"
+          },
+          {
+            "apiValue": "transfer",
+            "policyValue": "dpv:Transfer"
+          }
+        ]
+      }
+    },
+    {
+      "key": "availability",
+      "type": "boolean",
+      "description": "Derived generically from ODRL operand(s).",
+      "required": true,
+      "possibleValues": [],
+      "provenance": {
+        "x-operands": [
+          "dqv:Availability"
+        ],
+        "x-policyIds": [
+          "https://accomplish.org/policies/gdpr-policies/gdpr-article_15"
+        ],
+        "x-appliesTo": "duty",
+        "evaluatedAgainst": [
+          {
+            "rule": "duty",
+            "operator": "eq",
+            "value": true,
+            "policyId": "https://accomplish.org/policies/gdpr-policies/gdpr-article_15",
+            "action": "dpv:MakeAvailable",
+            "contextPath": "policy.permission[0].duty[1].constraint[1]",
+            "operand": "dqv:Availability"
+          }
+        ],
+        "valueMappings": []
+      }
+    },
+    {
+      "key": "categoriesOfPersonalData",
+      "type": "array",
+      "description": "Derived generically from ODRL operand(s).",
+      "required": true,
+      "possibleValues": [
+        "personalData",
+        "sensitivePersonalData",
+        "specialCategoryPersonalData"
+      ],
+      "provenance": {
+        "x-operands": [
+          "ex:hasCategoriesOfPersonalData"
+        ],
+        "x-policyIds": [
+          "https://accomplish.org/policies/gdpr-policies/gdpr-article_15"
+        ],
+        "x-appliesTo": "duty",
+        "evaluatedAgainst": [
+          {
+            "rule": "duty",
+            "operator": "eq",
+            "value": [
+              "personalData",
+              "sensitivePersonalData",
+              "specialCategoryPersonalData"
+            ],
+            "policyId": "https://accomplish.org/policies/gdpr-policies/gdpr-article_15",
+            "action": "dpv:MakeAvailable",
+            "contextPath": "policy.permission[0].duty[1].constraint[6]",
+            "operand": "ex:hasCategoriesOfPersonalData"
+          }
+        ],
+        "valueMappings": [
+          {
+            "apiValue": "personalData",
+            "policyValue": "dpv:PersonalData"
+          },
+          {
+            "apiValue": "sensitivePersonalData",
+            "policyValue": "dpv:SensitivePersonalData"
+          },
+          {
+            "apiValue": "specialCategoryPersonalData",
+            "policyValue": "dpv:SpecialCategoryPersonalData"
+          }
+        ]
+      }
+    },
+    {
+      "key": "completeness",
+      "type": "number",
+      "description": "Derived generically from ODRL operand(s).",
+      "required": true,
+      "possibleValues": [],
+      "provenance": {
+        "x-operands": [
+          "dqv:Completeness"
+        ],
+        "x-policyIds": [
+          "https://accomplish.org/policies/gdpr-policies/gdpr-article_15"
+        ],
+        "x-appliesTo": "duty",
+        "evaluatedAgainst": [
+          {
+            "rule": "duty",
+            "operator": "eq",
+            "value": 1,
+            "policyId": "https://accomplish.org/policies/gdpr-policies/gdpr-article_15",
+            "action": "dpv:MakeAvailable",
+            "contextPath": "policy.permission[0].duty[1].constraint[0]",
+            "operand": "dqv:Completeness"
+          }
+        ],
+        "valueMappings": []
+      }
+    },
+    {
+      "key": "conciseness",
+      "type": "number",
+      "description": "Derived generically from ODRL operand(s).",
+      "required": true,
+      "possibleValues": [],
+      "provenance": {
+        "x-operands": [
+          "dqv:Conciseness"
+        ],
+        "x-policyIds": [
+          "https://accomplish.org/policies/gdpr-policies/gdpr-article_15"
+        ],
+        "x-appliesTo": "duty",
+        "evaluatedAgainst": [
+          {
+            "rule": "duty",
+            "operator": "eq",
+            "value": 1,
+            "policyId": "https://accomplish.org/policies/gdpr-policies/gdpr-article_15",
+            "action": "dpv:MakeAvailable",
+            "contextPath": "policy.permission[0].duty[1].constraint[3]",
+            "operand": "dqv:Conciseness"
+          }
+        ],
+        "valueMappings": []
+      }
+    },
+    {
+      "key": "dataControllers",
+      "type": "array",
+      "description": "Derived generically from ODRL operand(s).",
+      "required": true,
+      "possibleValues": [
+        "datacontroller",
+        "destinationdatacontroller"
+      ],
+      "provenance": {
+        "x-operands": [
+          "dpv:hasDataController"
+        ],
+        "x-policyIds": [
+          "https://accomplish.org/policies/gdpr-policies/gdpr-article_20"
+        ],
+        "x-appliesTo": "permission",
+        "evaluatedAgainst": [
+          {
+            "rule": "permission",
+            "operator": "in",
+            "value": [
+              "datacontroller",
+              "destinationdatacontroller"
+            ],
+            "policyId": "https://accomplish.org/policies/gdpr-policies/gdpr-article_20",
+            "action": "dpv:Transfer",
+            "contextPath": "policy.permission[1].constraint[4]",
+            "operand": "dpv:hasDataController"
+          }
+        ],
+        "valueMappings": [
+          {
+            "apiValue": "datacontroller",
+            "policyValue": "https://example.com/controller/datacontroller"
+          },
+          {
+            "apiValue": "destinationdatacontroller",
+            "policyValue": "https://example.com/controller/destinationdatacontroller"
+          }
+        ]
+      }
+    },
+    {
+      "key": "dataSource",
+      "type": "string",
+      "description": "Derived generically from ODRL operand(s).",
+      "required": true,
+      "possibleValues": [
+        "dataSubjectDataSource"
+      ],
+      "provenance": {
+        "x-operands": [
+          "dpv:hasDataSource"
+        ],
+        "x-policyIds": [
+          "https://accomplish.org/policies/gdpr-policies/gdpr-article_15",
+          "https://accomplish.org/policies/gdpr-policies/gdpr-article_20"
+        ],
+        "x-appliesTo": "both",
+        "evaluatedAgainst": [
+          {
+            "rule": "duty",
+            "operator": "eq",
+            "value": "dataSubjectDataSource",
+            "policyId": "https://accomplish.org/policies/gdpr-policies/gdpr-article_15",
+            "action": "dpv:MakeAvailable",
+            "contextPath": "policy.permission[0].duty[0].constraint[3]",
+            "operand": "dpv:hasDataSource"
+          },
+          {
+            "rule": "permission",
+            "operator": "eq",
+            "value": "dataSubjectDataSource",
+            "policyId": "https://accomplish.org/policies/gdpr-policies/gdpr-article_20",
+            "action": "dpv:Obtain",
+            "contextPath": "policy.permission[0].constraint[0]",
+            "operand": "dpv:hasDataSource"
+          },
+          {
+            "rule": "permission",
+            "operator": "eq",
+            "value": "dataSubjectDataSource",
+            "policyId": "https://accomplish.org/policies/gdpr-policies/gdpr-article_20",
+            "action": "dpv:Transfer",
+            "contextPath": "policy.permission[1].constraint[0]",
+            "operand": "dpv:hasDataSource"
+          }
+        ],
+        "valueMappings": [
+          {
+            "apiValue": "dataSubjectDataSource",
+            "policyValue": "dpv:DataSubjectDataSource"
+          }
+        ]
+      }
+    },
+    {
+      "key": "documentedProcedures",
+      "type": "string",
+      "description": "Derived generically from ODRL operand(s).",
+      "required": true,
+      "possibleValues": [
+        "proceduresForResponsesAndNotifications"
+      ],
+      "provenance": {
+        "x-operands": [
+          "ex:hasDocumentedProcedures"
+        ],
+        "x-policyIds": [
+          "https://accomplish.org/policies/gdpr-policies/gdpr-article_15"
+        ],
+        "x-appliesTo": "duty",
+        "evaluatedAgainst": [
+          {
+            "rule": "duty",
+            "operator": "eq",
+            "value": "proceduresForResponsesAndNotifications",
+            "policyId": "https://accomplish.org/policies/gdpr-policies/gdpr-article_15",
+            "action": "dpv:MakeAvailable",
+            "contextPath": "policy.permission[0].duty[0].constraint[1]",
+            "operand": "ex:hasDocumentedProcedures"
+          }
+        ],
+        "valueMappings": [
+          {
+            "apiValue": "proceduresForResponsesAndNotifications",
+            "policyValue": "ex:proceduresForResponsesAndNotifications"
+          }
+        ]
+      }
+    },
+    {
+      "key": "dqvJustifications",
+      "type": "array",
+      "description": "Derived generically from ODRL operand(s).",
+      "required": true,
+      "possibleValues": [
+        "delayJustification",
+        "nonFulfilmentJustification"
+      ],
+      "provenance": {
+        "x-operands": [
+          "dqv:hasJustification"
+        ],
+        "x-policyIds": [
+          "https://accomplish.org/policies/gdpr-policies/gdpr-article_20"
+        ],
+        "x-appliesTo": "duty",
+        "evaluatedAgainst": [
+          {
+            "rule": "duty",
+            "operator": "isAnyOf",
+            "value": [
+              "delayJustification",
+              "nonFulfilmentJustification"
+            ],
+            "policyId": "https://accomplish.org/policies/gdpr-policies/gdpr-article_20",
+            "action": "ex:notify",
+            "contextPath": "policy.permission[0].duty[2].constraint[0]",
+            "operand": "dqv:hasJustification"
+          }
+        ],
+        "valueMappings": [
+          {
+            "apiValue": "delayJustification",
+            "policyValue": "dpv:DelayJustification"
+          },
+          {
+            "apiValue": "nonFulfilmentJustification",
+            "policyValue": "dpv:NonFulfilmentJustification"
+          }
+        ]
+      }
+    },
+    {
+      "key": "establishedCommunicationChannels",
+      "type": "array",
+      "description": "Derived generically from ODRL operand(s).",
+      "required": true,
+      "possibleValues": [
+        "electronic",
+        "paper"
+      ],
+      "provenance": {
+        "x-operands": [
+          "ex:hasEstablishedCommunicationChannel"
+        ],
+        "x-policyIds": [
+          "https://accomplish.org/policies/gdpr-policies/gdpr-article_15"
+        ],
+        "x-appliesTo": "duty",
+        "evaluatedAgainst": [
+          {
+            "rule": "duty",
+            "operator": "in",
+            "value": [
+              "electronic",
+              "paper"
+            ],
+            "policyId": "https://accomplish.org/policies/gdpr-policies/gdpr-article_15",
+            "action": "dpv:MakeAvailable",
+            "contextPath": "policy.permission[0].duty[0].constraint[0]",
+            "operand": "ex:hasEstablishedCommunicationChannel"
+          }
+        ],
+        "valueMappings": [
+          {
+            "apiValue": "electronic",
+            "policyValue": "ex:electronic"
+          },
+          {
+            "apiValue": "paper",
+            "policyValue": "ex:paper"
+          }
+        ]
+      }
+    },
+    {
+      "key": "humanInvolvement",
+      "type": "string",
+      "description": "Derived generically from ODRL operand(s).",
+      "required": true,
+      "possibleValues": [
+        "humanInvolvementForVerification"
+      ],
+      "provenance": {
+        "x-operands": [
+          "dpv:hasHumanInvolvement"
+        ],
+        "x-policyIds": [
+          "https://accomplish.org/policies/gdpr-policies/gdpr-article_15"
+        ],
+        "x-appliesTo": "duty",
+        "evaluatedAgainst": [
+          {
+            "rule": "duty",
+            "operator": "eq",
+            "value": "humanInvolvementForVerification",
+            "policyId": "https://accomplish.org/policies/gdpr-policies/gdpr-article_15",
+            "action": "dpv:MakeAvailable",
+            "contextPath": "policy.permission[0].duty[1].constraint[5]",
+            "operand": "dpv:hasHumanInvolvement"
+          }
+        ],
+        "valueMappings": [
+          {
+            "apiValue": "humanInvolvementForVerification",
+            "policyValue": "dpv:HumanInvolvementForVerification"
+          }
+        ]
+      }
+    },
+    {
+      "key": "impact",
+      "type": "string",
+      "description": "Derived generically from ODRL operand(s).",
+      "required": true,
+      "possibleValues": [
+        "impactOnOthers"
+      ],
+      "provenance": {
+        "x-operands": [
+          "ex:hasImpact"
+        ],
+        "x-policyIds": [
+          "https://accomplish.org/policies/gdpr-policies/gdpr-article_15"
+        ],
+        "x-appliesTo": "prohibition",
+        "evaluatedAgainst": [
+          {
+            "rule": "prohibition",
+            "operator": "eq",
+            "value": "impactOnOthers",
+            "policyId": "https://accomplish.org/policies/gdpr-policies/gdpr-article_15",
+            "action": "dpv:MakeAvailable",
+            "contextPath": "policy.prohibition[0].constraint[0]",
+            "operand": "ex:hasImpact"
+          }
+        ],
+        "valueMappings": [
+          {
+            "apiValue": "impactOnOthers",
+            "policyValue": "ex:ImpactOnOthers"
+          }
+        ]
+      }
+    },
+    {
+      "key": "impactOnDataSubjectOrDataSubjectGroup",
+      "type": "string",
+      "description": "Derived generically from ODRL operand(s).",
+      "required": true,
+      "possibleValues": [
+        "impactHarmful"
+      ],
+      "provenance": {
+        "x-operands": [
+          "ex:hasImpactOnDataSubjectOrDataSubjectGroup"
+        ],
+        "x-policyIds": [
+          "https://accomplish.org/policies/gdpr-policies/gdpr-article_20"
+        ],
+        "x-appliesTo": "prohibition",
+        "evaluatedAgainst": [
+          {
+            "rule": "prohibition",
+            "operator": "eq",
+            "value": "impactHarmful",
+            "policyId": "https://accomplish.org/policies/gdpr-policies/gdpr-article_20",
+            "action": "dpv:MakeAvailable",
+            "contextPath": "policy.prohibition[0].constraint[0]",
+            "operand": "ex:hasImpactOnDataSubjectOrDataSubjectGroup"
+          },
+          {
+            "rule": "prohibition",
+            "operator": "eq",
+            "value": "impactHarmful",
+            "policyId": "https://accomplish.org/policies/gdpr-policies/gdpr-article_20",
+            "action": "dpv:Transfer",
+            "contextPath": "policy.prohibition[1].constraint[0]",
+            "operand": "ex:hasImpactOnDataSubjectOrDataSubjectGroup"
+          }
+        ],
+        "valueMappings": [
+          {
+            "apiValue": "impactHarmful",
+            "policyValue": "ex:ImpactHarmful"
+          }
+        ]
+      }
+    },
+    {
+      "key": "justifications",
+      "type": "array",
+      "description": "Derived generically from ODRL operand(s).",
+      "required": true,
+      "possibleValues": [
+        "automatedDecisionLogic",
+        "complexityOfProcess",
+        "dataTransfersOutsideEu",
+        "highVolumeOfProcesses"
+      ],
+      "provenance": {
+        "x-operands": [
+          "dpv:hasJustification"
+        ],
+        "x-policyIds": [
+          "https://accomplish.org/policies/gdpr-policies/gdpr-article_15"
+        ],
+        "x-appliesTo": "duty",
+        "evaluatedAgainst": [
+          {
+            "rule": "duty",
+            "operator": "isAllOf",
+            "value": [
+              "automatedDecisionLogic",
+              "dataTransfersOutsideEu",
+              "complexityOfProcess"
+            ],
+            "policyId": "https://accomplish.org/policies/gdpr-policies/gdpr-article_15",
+            "action": "dpv:MakeAvailable",
+            "contextPath": "policy.permission[0].duty[1].constraint[7]",
+            "operand": "dpv:hasJustification"
+          },
+          {
+            "rule": "consequence",
+            "operator": "neq",
+            "value": [
+              "highVolumeOfProcesses",
+              "complexityOfProcess"
+            ],
+            "policyId": "https://accomplish.org/policies/gdpr-policies/gdpr-article_15",
+            "action": "compensate",
+            "contextPath": "policy.permission[0].duty[1].consequence[0].constraint[2]",
+            "operand": "dpv:hasJustification"
+          }
+        ],
+        "valueMappings": [
+          {
+            "apiValue": "automatedDecisionLogic",
+            "policyValue": "ex:automatedDecisionLogic"
+          },
+          {
+            "apiValue": "dataTransfersOutsideEu",
+            "policyValue": "ex:dataTransfersOutsideEU"
+          },
+          {
+            "apiValue": "complexityOfProcess",
+            "policyValue": "justifications:ComplexityOfProcess"
+          },
+          {
+            "apiValue": "highVolumeOfProcesses",
+            "policyValue": "justifications:HighVolumeOfProcesses"
+          }
+        ]
+      }
+    },
+    {
+      "key": "legalBases",
+      "type": "array",
+      "description": "Derived generically from ODRL operand(s).",
+      "required": true,
+      "possibleValues": [
+        "a61A",
+        "a61B",
+        "a61E",
+        "jointDataControllersAgreement"
+      ],
+      "provenance": {
+        "x-operands": [
+          "dpv:hasLegalBasis"
+        ],
+        "x-policyIds": [
+          "https://accomplish.org/policies/gdpr-policies/gdpr-article_20"
+        ],
+        "x-appliesTo": "permission",
+        "evaluatedAgainst": [
+          {
+            "rule": "permission",
+            "operator": "isAnyOf",
+            "value": [
+              "a61A",
+              "a61B"
+            ],
+            "policyId": "https://accomplish.org/policies/gdpr-policies/gdpr-article_20",
+            "action": "dpv:Obtain",
+            "contextPath": "policy.permission[0].constraint[1]",
+            "operand": "dpv:hasLegalBasis"
+          },
+          {
+            "rule": "permission",
+            "operator": "neq",
+            "value": "a61E",
+            "policyId": "https://accomplish.org/policies/gdpr-policies/gdpr-article_20",
+            "action": "dpv:Obtain",
+            "contextPath": "policy.permission[0].constraint[2]",
+            "operand": "dpv:hasLegalBasis"
+          },
+          {
+            "rule": "permission",
+            "operator": "isAnyOf",
+            "value": [
+              "a61A",
+              "a61B"
+            ],
+            "policyId": "https://accomplish.org/policies/gdpr-policies/gdpr-article_20",
+            "action": "dpv:Transfer",
+            "contextPath": "policy.permission[1].constraint[1]",
+            "operand": "dpv:hasLegalBasis"
+          },
+          {
+            "rule": "permission",
+            "operator": "neq",
+            "value": "a61E",
+            "policyId": "https://accomplish.org/policies/gdpr-policies/gdpr-article_20",
+            "action": "dpv:Transfer",
+            "contextPath": "policy.permission[1].constraint[2]",
+            "operand": "dpv:hasLegalBasis"
+          },
+          {
+            "rule": "permission",
+            "operator": "eq",
+            "value": "jointDataControllersAgreement",
+            "policyId": "https://accomplish.org/policies/gdpr-policies/gdpr-article_20",
+            "action": "dpv:Transfer",
+            "contextPath": "policy.permission[1].constraint[3]",
+            "operand": "dpv:hasLegalBasis"
+          }
+        ],
+        "valueMappings": [
+          {
+            "apiValue": "a61A",
+            "policyValue": "eu-gdpr:A6-1-a"
+          },
+          {
+            "apiValue": "a61B",
+            "policyValue": "eu-gdpr:A6-1-b"
+          },
+          {
+            "apiValue": "a61E",
+            "policyValue": "eu-gdpr:A6-1-e"
+          },
+          {
+            "apiValue": "jointDataControllersAgreement",
+            "policyValue": "dpv:JointDataControllersAgreement"
+          }
+        ]
+      }
+    },
+    {
+      "key": "makeAvailable",
+      "type": "boolean",
+      "description": "Derived generically from ODRL operand(s).",
+      "required": true,
+      "possibleValues": [],
+      "provenance": {
+        "x-operands": [
+          "dutyAction:dpv:MakeAvailable"
+        ],
+        "x-policyIds": [
+          "https://accomplish.org/policies/gdpr-policies/gdpr-article_15"
+        ],
+        "x-appliesTo": "duty",
+        "evaluatedAgainst": [
+          {
+            "rule": "duty",
+            "operator": "eq",
+            "value": true,
+            "policyId": "https://accomplish.org/policies/gdpr-policies/gdpr-article_15",
+            "action": "dpv:MakeAvailable",
+            "contextPath": "policy.permission[0].duty[0].action",
+            "operand": "dutyAction:dpv:MakeAvailable"
+          },
+          {
+            "rule": "duty",
+            "operator": "eq",
+            "value": true,
+            "policyId": "https://accomplish.org/policies/gdpr-policies/gdpr-article_15",
+            "action": "dpv:MakeAvailable",
+            "contextPath": "policy.permission[0].duty[1].action",
+            "operand": "dutyAction:dpv:MakeAvailable"
+          }
+        ],
+        "valueMappings": []
+      }
+    },
+    {
+      "key": "makeAvailableDuty",
+      "type": "boolean",
+      "description": "Derived generically from ODRL operand(s).",
+      "required": true,
+      "possibleValues": [],
+      "provenance": {
+        "x-operands": [
+          "dutyAction:dpv:MakeAvailable"
+        ],
+        "x-policyIds": [
+          "https://accomplish.org/policies/gdpr-policies/gdpr-article_20"
+        ],
+        "x-appliesTo": "duty",
+        "evaluatedAgainst": [
+          {
+            "rule": "duty",
+            "operator": "eq",
+            "value": true,
+            "policyId": "https://accomplish.org/policies/gdpr-policies/gdpr-article_20",
+            "action": "dpv:MakeAvailable",
+            "contextPath": "policy.permission[0].duty[0].action",
+            "operand": "dutyAction:dpv:MakeAvailable"
+          }
+        ],
+        "valueMappings": []
+      }
+    },
+    {
+      "key": "mediaTypes",
+      "type": "array",
+      "description": "Derived generically from ODRL operand(s).",
+      "required": true,
+      "possibleValues": [
+        "application/json",
+        "application/xml",
+        "text/csv"
+      ],
+      "provenance": {
+        "x-operands": [
+          "dcat:mediaType"
+        ],
+        "x-policyIds": [
+          "https://accomplish.org/policies/gdpr-policies/gdpr-article_20"
+        ],
+        "x-appliesTo": "duty",
+        "evaluatedAgainst": [
+          {
+            "rule": "duty",
+            "operator": "isAnyOf",
+            "value": [
+              "application/json",
+              "text/csv",
+              "application/xml"
+            ],
+            "policyId": "https://accomplish.org/policies/gdpr-policies/gdpr-article_20",
+            "action": "dpv:MakeAvailable",
+            "contextPath": "policy.permission[0].duty[0].constraint[0]",
+            "operand": "dcat:mediaType"
+          },
+          {
+            "rule": "duty",
+            "operator": "isAnyOf",
+            "value": [
+              "application/json",
+              "text/csv",
+              "application/xml"
+            ],
+            "policyId": "https://accomplish.org/policies/gdpr-policies/gdpr-article_20",
+            "action": "dpv:Transfer",
+            "contextPath": "policy.permission[1].duty[0].constraint[0]",
+            "operand": "dcat:mediaType"
+          }
+        ],
+        "valueMappings": [
+          {
+            "apiValue": "application/json",
+            "policyValue": "application/json"
+          },
+          {
+            "apiValue": "text/csv",
+            "policyValue": "text/csv"
+          },
+          {
+            "apiValue": "application/xml",
+            "policyValue": "application/xml"
+          }
+        ]
+      }
+    },
+    {
+      "key": "notify",
+      "type": "boolean",
+      "description": "Derived generically from ODRL operand(s).",
+      "required": true,
+      "possibleValues": [],
+      "provenance": {
+        "x-operands": [
+          "dutyAction:ex:notify"
+        ],
+        "x-policyIds": [
+          "https://accomplish.org/policies/gdpr-policies/gdpr-article_20"
+        ],
+        "x-appliesTo": "duty",
+        "evaluatedAgainst": [
+          {
+            "rule": "duty",
+            "operator": "eq",
+            "value": true,
+            "policyId": "https://accomplish.org/policies/gdpr-policies/gdpr-article_20",
+            "action": "ex:notify",
+            "contextPath": "policy.permission[0].duty[2].action",
+            "operand": "dutyAction:ex:notify"
+          },
+          {
+            "rule": "duty",
+            "operator": "eq",
+            "value": true,
+            "policyId": "https://accomplish.org/policies/gdpr-policies/gdpr-article_20",
+            "action": "ex:notify",
+            "contextPath": "policy.permission[1].duty[3].action",
+            "operand": "dutyAction:ex:notify"
+          }
+        ],
+        "valueMappings": []
+      }
+    },
+    {
+      "key": "payAmount",
+      "type": "string",
+      "description": "Derived generically from ODRL operand(s).",
+      "required": true,
+      "possibleValues": [
+        "20000000.00"
+      ],
+      "provenance": {
+        "x-operands": [
+          "payAmount"
+        ],
+        "x-policyIds": [
+          "https://accomplish.org/policies/gdpr-policies/gdpr-article_15",
+          "https://accomplish.org/policies/gdpr-policies/gdpr-article_20"
+        ],
+        "x-appliesTo": "duty",
+        "evaluatedAgainst": [
+          {
+            "rule": "consequence",
+            "operator": "lteq",
+            "value": "20000000.00",
+            "policyId": "https://accomplish.org/policies/gdpr-policies/gdpr-article_15",
+            "action": "compensate",
+            "contextPath": "policy.permission[0].duty[0].consequence[0].constraint[0]",
+            "operand": "payAmount",
+            "unit": "EUR"
+          },
+          {
+            "rule": "consequence",
+            "operator": "lteq",
+            "value": "20000000.00",
+            "policyId": "https://accomplish.org/policies/gdpr-policies/gdpr-article_15",
+            "action": "compensate",
+            "contextPath": "policy.permission[0].duty[1].consequence[0].constraint[0]",
+            "operand": "payAmount",
+            "unit": "EUR"
+          },
+          {
+            "rule": "consequence",
+            "operator": "lteq",
+            "value": "20000000.00",
+            "policyId": "https://accomplish.org/policies/gdpr-policies/gdpr-article_20",
+            "action": "compensate",
+            "contextPath": "policy.permission[0].duty[0].consequence[0].constraint[0]",
+            "operand": "payAmount",
+            "unit": "EUR"
+          },
+          {
+            "rule": "consequence",
+            "operator": "lteq",
+            "value": "20000000.00",
+            "policyId": "https://accomplish.org/policies/gdpr-policies/gdpr-article_20",
+            "action": "compensate",
+            "contextPath": "policy.permission[1].duty[0].consequence[0].constraint[0]",
+            "operand": "payAmount",
+            "unit": "EUR"
+          }
+        ],
+        "valueMappings": [
+          {
+            "apiValue": "20000000.00",
+            "policyValue": "20000000.00"
+          }
+        ]
+      }
+    },
+    {
+      "key": "recipients",
+      "type": "array",
+      "description": "Derived generically from ODRL operand(s).",
+      "required": true,
+      "possibleValues": [
+        "dataSubject",
+        "representative"
+      ],
+      "provenance": {
+        "x-operands": [
+          "dpv:hasRecipient"
+        ],
+        "x-policyIds": [
+          "https://accomplish.org/policies/gdpr-policies/gdpr-article_15"
+        ],
+        "x-appliesTo": "duty",
+        "evaluatedAgainst": [
+          {
+            "rule": "duty",
+            "operator": "in",
+            "value": [
+              "dataSubject",
+              "representative"
+            ],
+            "policyId": "https://accomplish.org/policies/gdpr-policies/gdpr-article_15",
+            "action": "dpv:MakeAvailable",
+            "contextPath": "policy.permission[0].duty[1].constraint[8]",
+            "operand": "dpv:hasRecipient"
+          }
+        ],
+        "valueMappings": [
+          {
+            "apiValue": "dataSubject",
+            "policyValue": "dpv:DataSubject"
+          },
+          {
+            "apiValue": "representative",
+            "policyValue": "dpv:Representative"
+          }
+        ]
+      }
+    },
+    {
+      "key": "review",
+      "type": "boolean",
+      "description": "Derived generically from ODRL operand(s).",
+      "required": true,
+      "possibleValues": [],
+      "provenance": {
+        "x-operands": [
+          "dutyAction:ex:review"
+        ],
+        "x-policyIds": [
+          "https://accomplish.org/policies/gdpr-policies/gdpr-article_20"
+        ],
+        "x-appliesTo": "duty",
+        "evaluatedAgainst": [
+          {
+            "rule": "duty",
+            "operator": "eq",
+            "value": true,
+            "policyId": "https://accomplish.org/policies/gdpr-policies/gdpr-article_20",
+            "action": "ex:review",
+            "contextPath": "policy.permission[0].duty[1].action",
+            "operand": "dutyAction:ex:review"
+          },
+          {
+            "rule": "duty",
+            "operator": "eq",
+            "value": true,
+            "policyId": "https://accomplish.org/policies/gdpr-policies/gdpr-article_20",
+            "action": "ex:review",
+            "contextPath": "policy.permission[1].duty[1].action",
+            "operand": "dutyAction:ex:review"
+          },
+          {
+            "rule": "duty",
+            "operator": "eq",
+            "value": true,
+            "policyId": "https://accomplish.org/policies/gdpr-policies/gdpr-article_20",
+            "action": "ex:review",
+            "contextPath": "policy.permission[1].duty[2].action",
+            "operand": "dutyAction:ex:review"
+          }
+        ],
+        "valueMappings": []
+      }
+    },
+    {
+      "key": "status",
+      "type": "string",
+      "description": "Derived generically from ODRL operand(s).",
+      "required": true,
+      "possibleValues": [
+        "requestActionDelayed"
+      ],
+      "provenance": {
+        "x-operands": [
+          "dpv:hasStatus"
+        ],
+        "x-policyIds": [
+          "https://accomplish.org/policies/gdpr-policies/gdpr-article_15"
+        ],
+        "x-appliesTo": "duty",
+        "evaluatedAgainst": [
+          {
+            "rule": "consequence",
+            "operator": "neq",
+            "value": "requestActionDelayed",
+            "policyId": "https://accomplish.org/policies/gdpr-policies/gdpr-article_15",
+            "action": "compensate",
+            "contextPath": "policy.permission[0].duty[1].consequence[0].constraint[1]",
+            "operand": "dpv:hasStatus"
+          }
+        ],
+        "valueMappings": [
+          {
+            "apiValue": "requestActionDelayed",
+            "policyValue": "dpv:RequestActionDelayed"
+          }
+        ]
+      }
+    },
+    {
+      "key": "technicalMeasures",
+      "type": "array",
+      "description": "Derived generically from ODRL operand(s).",
+      "required": true,
+      "possibleValues": [
+        "accessControlMethod",
+        "activityMonitoring",
+        "api",
+        "authorisationProtocols",
+        "encryption",
+        "securityMethod"
+      ],
+      "provenance": {
+        "x-operands": [
+          "dpv:hasTechnicalMeasure"
+        ],
+        "x-policyIds": [
+          "https://accomplish.org/policies/gdpr-policies/gdpr-article_20"
+        ],
+        "x-appliesTo": "duty",
+        "evaluatedAgainst": [
+          {
+            "rule": "duty",
+            "operator": "isAllOf",
+            "value": [
+              "accessControlMethod",
+              "encryption",
+              "activityMonitoring",
+              "authorisationProtocols",
+              "securityMethod",
+              "api"
+            ],
+            "policyId": "https://accomplish.org/policies/gdpr-policies/gdpr-article_20",
+            "action": "dpv:MakeAvailable",
+            "contextPath": "policy.permission[0].duty[0].constraint[1]",
+            "operand": "dpv:hasTechnicalMeasure"
+          },
+          {
+            "rule": "duty",
+            "operator": "isAllOf",
+            "value": [
+              "accessControlMethod",
+              "encryption",
+              "activityMonitoring",
+              "authorisationProtocols",
+              "securityMethod",
+              "api"
+            ],
+            "policyId": "https://accomplish.org/policies/gdpr-policies/gdpr-article_20",
+            "action": "dpv:Transfer",
+            "contextPath": "policy.permission[1].duty[0].constraint[1]",
+            "operand": "dpv:hasTechnicalMeasure"
+          }
+        ],
+        "valueMappings": [
+          {
+            "apiValue": "accessControlMethod",
+            "policyValue": "dpv:AccessControlMethod"
+          },
+          {
+            "apiValue": "encryption",
+            "policyValue": "dpv:Encryption"
+          },
+          {
+            "apiValue": "activityMonitoring",
+            "policyValue": "dpv:ActivityMonitoring"
+          },
+          {
+            "apiValue": "authorisationProtocols",
+            "policyValue": "dpv:AuthorisationProtocols"
+          },
+          {
+            "apiValue": "securityMethod",
+            "policyValue": "dpv:SecurityMethod"
+          },
+          {
+            "apiValue": "api",
+            "policyValue": "tech:API"
+          }
+        ]
+      }
+    },
+    {
+      "key": "technicalOrganisationalMeasures",
+      "type": "array",
+      "description": "Derived generically from ODRL operand(s).",
+      "required": true,
+      "possibleValues": [
+        "dataProcessingRecord",
+        "dataTransferRecord",
+        "dataTransferTool"
+      ],
+      "provenance": {
+        "x-operands": [
+          "dpv:hasTechnicalOrganisationalMeasure"
+        ],
+        "x-policyIds": [
+          "https://accomplish.org/policies/gdpr-policies/gdpr-article_15",
+          "https://accomplish.org/policies/gdpr-policies/gdpr-article_20"
+        ],
+        "x-appliesTo": "duty",
+        "evaluatedAgainst": [
+          {
+            "rule": "duty",
+            "operator": "isAllOf",
+            "value": [
+              "dataTransferRecord",
+              "dataProcessingRecord"
+            ],
+            "policyId": "https://accomplish.org/policies/gdpr-policies/gdpr-article_15",
+            "action": "dpv:MakeAvailable",
+            "contextPath": "policy.permission[0].duty[0].constraint[2]",
+            "operand": "dpv:hasTechnicalOrganisationalMeasure"
+          },
+          {
+            "rule": "duty",
+            "operator": "eq",
+            "value": "dataTransferTool",
+            "policyId": "https://accomplish.org/policies/gdpr-policies/gdpr-article_20",
+            "action": "dpv:MakeAvailable",
+            "contextPath": "policy.permission[0].duty[0].constraint[2]",
+            "operand": "dpv:hasTechnicalOrganisationalMeasure"
+          },
+          {
+            "rule": "duty",
+            "operator": "eq",
+            "value": "dataTransferTool",
+            "policyId": "https://accomplish.org/policies/gdpr-policies/gdpr-article_20",
+            "action": "dpv:Transfer",
+            "contextPath": "policy.permission[1].duty[0].constraint[2]",
+            "operand": "dpv:hasTechnicalOrganisationalMeasure"
+          }
+        ],
+        "valueMappings": [
+          {
+            "apiValue": "dataTransferRecord",
+            "policyValue": "dpv:DataTransferRecord"
+          },
+          {
+            "apiValue": "dataProcessingRecord",
+            "policyValue": "dpv:DataProcessingRecord"
+          },
+          {
+            "apiValue": "dataTransferTool",
+            "policyValue": "eu-gdpr:DataTransferTool"
+          }
+        ]
+      }
+    },
+    {
+      "key": "time",
+      "type": "string",
+      "description": "Derived generically from ODRL operand(s).",
+      "required": true,
+      "possibleValues": [
+        "P1M"
+      ],
+      "provenance": {
+        "x-operands": [
+          "odrl:time"
+        ],
+        "x-policyIds": [
+          "https://accomplish.org/policies/gdpr-policies/gdpr-article_15"
+        ],
+        "x-appliesTo": "duty",
+        "evaluatedAgainst": [
+          {
+            "rule": "consequence",
+            "operator": "lte",
+            "value": "P1M",
+            "policyId": "https://accomplish.org/policies/gdpr-policies/gdpr-article_15",
+            "action": "compensate",
+            "contextPath": "policy.permission[0].duty[1].consequence[0].constraint[3]",
+            "operand": "odrl:time"
+          }
+        ],
+        "valueMappings": [
+          {
+            "apiValue": "P1M",
+            "policyValue": "P1M"
+          }
+        ]
+      }
+    },
+    {
+      "key": "transfer",
+      "type": "boolean",
+      "description": "Derived generically from ODRL operand(s).",
+      "required": true,
+      "possibleValues": [],
+      "provenance": {
+        "x-operands": [
+          "dutyAction:dpv:Transfer"
+        ],
+        "x-policyIds": [
+          "https://accomplish.org/policies/gdpr-policies/gdpr-article_20"
+        ],
+        "x-appliesTo": "duty",
+        "evaluatedAgainst": [
+          {
+            "rule": "duty",
+            "operator": "eq",
+            "value": true,
+            "policyId": "https://accomplish.org/policies/gdpr-policies/gdpr-article_20",
+            "action": "dpv:Transfer",
+            "contextPath": "policy.permission[1].duty[0].action",
+            "operand": "dutyAction:dpv:Transfer"
+          }
+        ],
+        "valueMappings": []
+      }
+    },
+    {
+      "key": "understandability",
+      "type": "number",
+      "description": "Derived generically from ODRL operand(s).",
+      "required": true,
+      "possibleValues": [],
+      "provenance": {
+        "x-operands": [
+          "dqv:Understandability"
+        ],
+        "x-policyIds": [
+          "https://accomplish.org/policies/gdpr-policies/gdpr-article_15"
+        ],
+        "x-appliesTo": "duty",
+        "evaluatedAgainst": [
+          {
+            "rule": "duty",
+            "operator": "eq",
+            "value": 1,
+            "policyId": "https://accomplish.org/policies/gdpr-policies/gdpr-article_15",
+            "action": "dpv:MakeAvailable",
+            "contextPath": "policy.permission[0].duty[1].constraint[2]",
+            "operand": "dqv:Understandability"
+          }
+        ],
+        "valueMappings": []
+      }
+    }
+  ]
+}

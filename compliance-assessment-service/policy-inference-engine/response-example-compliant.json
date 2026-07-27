@@ -1,6 +1,6 @@
 {
-  "evaluationId": "9b1b4ec6-0852-493b-80ec-b2f825ccd22d",
-  "requestId": "compliance-check-001",
+  "evaluationId": "5a0fc302-7681-4562-9065-1deb8471e155",
+  "requestId": "example-compliant-article-15-and-20",
   "status": "completed",
   "overallVerdict": "compliant",
   "checkedPolicies": [
@@ -8,16 +8,12 @@
     "https://accomplish.org/policies/gdpr-policies/gdpr-article_20"
   ],
   "summary": {
-    "checksPassed": 47,
+    "checksPassed": 50,
     "checksFailed": 0,
     "checksIndeterminate": 0
   },
   "results": [
     {
-      "verdict": "compliant",
-      "nextActions": {
-        "review": []
-      },
       "checks": [
         {
           "policyIds": [
@@ -33,6 +29,25 @@
         },
         {
           "policyIds": [
+            "https://accomplish.org/policies/gdpr-policies/gdpr-article_15"
+          ],
+          "name": "actions",
+          "status": "pass",
+          "details": "Constraint satisfied.",
+          "source": "actions",
+          "operator": "isAnyOf",
+          "expected": [
+            "access"
+          ],
+          "actual": [
+            "access",
+            "obtain",
+            "transfer",
+            "makeAvailable"
+          ]
+        },
+        {
+          "policyIds": [
             "https://accomplish.org/policies/gdpr-policies/gdpr-article_20"
           ],
           "name": "actions",
@@ -44,8 +59,10 @@
             "obtain"
           ],
           "actual": [
+            "access",
             "obtain",
-            "transfer"
+            "transfer",
+            "makeAvailable"
           ]
         },
         {
@@ -62,8 +79,10 @@
             "transfer"
           ],
           "actual": [
+            "access",
             "obtain",
-            "transfer"
+            "transfer",
+            "makeAvailable"
           ]
         },
         {
@@ -237,6 +256,30 @@
         },
         {
           "policyIds": [
+            "https://accomplish.org/policies/gdpr-policies/gdpr-article_15"
+          ],
+          "name": "impact",
+          "status": "pass",
+          "details": "Constraint satisfied.",
+          "source": "impact",
+          "operator": "eq",
+          "expected": "impactOnOthers",
+          "actual": "impactOnOthers"
+        },
+        {
+          "policyIds": [
+            "https://accomplish.org/policies/gdpr-policies/gdpr-article_20"
+          ],
+          "name": "impactOnDataSubjectOrDataSubjectGroup",
+          "status": "pass",
+          "details": "Constraint satisfied.",
+          "source": "impactOnDataSubjectOrDataSubjectGroup",
+          "operator": "eq",
+          "expected": "impactHarmful",
+          "actual": "impactHarmful"
+        },
+        {
+          "policyIds": [
             "https://accomplish.org/policies/gdpr-policies/gdpr-article_20"
           ],
           "name": "impactOnDataSubjectOrDataSubjectGroup",
@@ -263,7 +306,7 @@
           ],
           "actual": [
             "automatedDecisionLogic",
-            "dataTransfersOutsideEU",
+            "dataTransfersOutsideEu",
             "complexityOfProcess"
           ]
         },
@@ -282,7 +325,7 @@
           ],
           "actual": [
             "automatedDecisionLogic",
-            "dataTransfersOutsideEU",
+            "dataTransfersOutsideEu",
             "complexityOfProcess"
           ]
         },
@@ -475,7 +518,7 @@
           "source": "payAmount",
           "operator": "lteq",
           "expected": "20000000.00",
-          "actual": 2.0E7
+          "actual": "20000000.00"
         },
         {
           "policyIds": [
@@ -487,7 +530,7 @@
           "source": "payAmount",
           "operator": "lteq",
           "expected": "20000000.00",
-          "actual": 2.0E7
+          "actual": "20000000.00"
         },
         {
           "policyIds": [
@@ -499,7 +542,7 @@
           "source": "payAmount",
           "operator": "lteq",
           "expected": "20000000.00",
-          "actual": 2.0E7
+          "actual": "20000000.00"
         },
         {
           "policyIds": [
@@ -511,7 +554,7 @@
           "source": "payAmount",
           "operator": "lteq",
           "expected": "20000000.00",
-          "actual": 2.0E7
+          "actual": "20000000.00"
         },
         {
           "policyIds": [
@@ -527,7 +570,8 @@
             "representative"
           ],
           "actual": [
-            "dataSubject"
+            "dataSubject",
+            "representative"
           ]
         },
         {
@@ -717,7 +761,11 @@
           "expected": 1,
           "actual": 1
         }
-      ]
+      ],
+      "nextActions": {
+        "review": []
+      },
+      "verdict": "compliant"
     }
   ]
 }

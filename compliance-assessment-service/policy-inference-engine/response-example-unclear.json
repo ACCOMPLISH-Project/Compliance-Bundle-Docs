@@ -1,0 +1,30 @@
+{
+  "evaluationId": "44d0f3d4-c39b-4876-b7bc-9fa5acf732a9",
+  "requestId": "example-unclear-article-20",
+  "status": "failed-validation",
+  "overallVerdict": "unclear",
+  "checkedPolicies": [
+    "https://accomplish.org/policies/gdpr-policies/gdpr-article_20"
+  ],
+  "summary": {
+    "checksPassed": 0,
+    "checksFailed": 0,
+    "checksIndeterminate": 1
+  },
+  "validation": {
+    "missingRequiredFields": [
+      "payAmount"
+    ]
+  },
+  "results": [
+    {
+      "checks": [],
+      "nextActions": {
+        "review": [
+          "payAmount"
+        ]
+      },
+      "verdict": "unclear"
+    }
+  ]
+}

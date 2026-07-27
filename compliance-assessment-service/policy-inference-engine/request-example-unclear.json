@@ -1,0 +1,28 @@
+{
+  "requestId": "example-unclear-article-20",
+  "checkedPolicies": [
+    "gdpr-article-20"
+  ],
+  "system": {
+    "systemId": "test-system-001",
+    "characteristics": {
+      "actions": ["obtain"],
+      "dataSource": "dataSubjectDataSource",
+      "legalBases": ["a61A"],
+      "makeAvailable": true,
+      "mediaTypes": ["application/json"],
+      "notify": true,
+      "justifications": ["delayJustification"],
+      "review": true,
+      "technicalMeasures": [
+        "accessControlMethod",
+        "encryption",
+        "activityMonitoring",
+        "authorisationProtocols",
+        "securityMethod",
+        "api"
+      ],
+      "technicalOrganisationalMeasure": "dataTransferTool"
+    }
+  }
+}

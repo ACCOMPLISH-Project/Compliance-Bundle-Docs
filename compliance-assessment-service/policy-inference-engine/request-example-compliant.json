@@ -1,0 +1,85 @@
+{
+  "requestId": "example-compliant-article-15-and-20",
+  "checkedPolicies": [
+    "gdpr-article-15",
+    "gdpr-article-20"
+  ],
+  "system": {
+    "systemId": "test-system-001",
+    "characteristics": {
+      "actions": [
+        "access",
+        "obtain",
+        "transfer",
+        "makeAvailable"
+      ],
+      "accuracy": 1,
+      "availability": true,
+      "categoriesOfPersonalData": [
+        "personalData",
+        "sensitivePersonalData",
+        "specialCategoryPersonalData"
+      ],
+      "completeness": 1,
+      "conciseness": 1,
+      "dataControllers": [
+        "datacontroller",
+        "destinationdatacontroller"
+      ],
+      "dataSource": "dataSubjectDataSource",
+      "documentedProcedures": "proceduresForResponsesAndNotifications",
+      "dqvJustifications": [
+        "delayJustification"
+      ],
+      "establishedCommunicationChannels": [
+        "electronic",
+        "paper"
+      ],
+      "humanInvolvement": "humanInvolvementForVerification",
+      "impact": "impactOnOthers",
+      "impactOnDataSubjectOrDataSubjectGroup": "impactHarmful",
+      "justifications": [
+        "automatedDecisionLogic",
+        "dataTransfersOutsideEu",
+        "complexityOfProcess"
+      ],
+      "legalBases": [
+        "a61A",
+        "jointDataControllersAgreement"
+      ],
+      "makeAvailable": true,
+      "makeAvailableDuty": true,
+      "mediaTypes": [
+        "application/json",
+        "text/csv"
+      ],
+      "notify": true,
+      "payAmount": "20000000.00",
+      "recipients": [
+        "dataSubject",
+        "representative"
+      ],
+      "review": true,
+      "status": "requestActionCompleted",
+      "technicalMeasures": [
+        "accessControlMethod",
+        "encryption",
+        "activityMonitoring",
+        "authorisationProtocols",
+        "securityMethod",
+        "api"
+      ],
+      "technicalOrganisationalMeasures": [
+        "dataTransferRecord",
+        "dataProcessingRecord",
+        "dataTransferTool"
+      ],
+      "time": "P1M",
+      "transfer": true,
+      "understandability": 1
+    }
+  },
+  "options": {
+    "decisionView": "detailed"
+  }
+}

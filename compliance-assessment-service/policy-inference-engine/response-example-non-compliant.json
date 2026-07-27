@@ -1,0 +1,773 @@
+{
+  "evaluationId": "b640b5c3-7c08-449e-8459-d6a5fdb0c016",
+  "requestId": "example-non-compliant-article-15-and-20",
+  "status": "completed",
+  "overallVerdict": "non-compliant",
+  "checkedPolicies": [
+    "https://accomplish.org/policies/gdpr-policies/gdpr-article_15",
+    "https://accomplish.org/policies/gdpr-policies/gdpr-article_20"
+  ],
+  "summary": {
+    "checksPassed": 49,
+    "checksFailed": 1,
+    "checksIndeterminate": 0
+  },
+  "results": [
+    {
+      "checks": [
+        {
+          "policyIds": [
+            "https://accomplish.org/policies/gdpr-policies/gdpr-article_15"
+          ],
+          "name": "accuracy",
+          "status": "pass",
+          "details": "Constraint satisfied.",
+          "source": "accuracy",
+          "operator": "eq",
+          "expected": 1,
+          "actual": 1
+        },
+        {
+          "policyIds": [
+            "https://accomplish.org/policies/gdpr-policies/gdpr-article_15"
+          ],
+          "name": "actions",
+          "status": "pass",
+          "details": "Constraint satisfied.",
+          "source": "actions",
+          "operator": "isAnyOf",
+          "expected": [
+            "access"
+          ],
+          "actual": [
+            "access",
+            "obtain",
+            "transfer",
+            "makeAvailable"
+          ]
+        },
+        {
+          "policyIds": [
+            "https://accomplish.org/policies/gdpr-policies/gdpr-article_20"
+          ],
+          "name": "actions",
+          "status": "pass",
+          "details": "Constraint satisfied.",
+          "source": "actions",
+          "operator": "isAnyOf",
+          "expected": [
+            "obtain"
+          ],
+          "actual": [
+            "access",
+            "obtain",
+            "transfer",
+            "makeAvailable"
+          ]
+        },
+        {
+          "policyIds": [
+            "https://accomplish.org/policies/gdpr-policies/gdpr-article_20"
+          ],
+          "name": "actions",
+          "status": "pass",
+          "details": "Constraint satisfied.",
+          "source": "actions",
+          "operator": "isAnyOf",
+          "expected": [
+            "obtain",
+            "transfer"
+          ],
+          "actual": [
+            "access",
+            "obtain",
+            "transfer",
+            "makeAvailable"
+          ]
+        },
+        {
+          "policyIds": [
+            "https://accomplish.org/policies/gdpr-policies/gdpr-article_15"
+          ],
+          "name": "availability",
+          "status": "fail",
+          "details": "Constraint violated.",
+          "source": "availability",
+          "operator": "eq",
+          "expected": true,
+          "actual": false
+        },
+        {
+          "policyIds": [
+            "https://accomplish.org/policies/gdpr-policies/gdpr-article_15"
+          ],
+          "name": "categoriesOfPersonalData",
+          "status": "pass",
+          "details": "Constraint satisfied.",
+          "source": "categoriesOfPersonalData",
+          "operator": "eq",
+          "expected": [
+            "personalData",
+            "sensitivePersonalData",
+            "specialCategoryPersonalData"
+          ],
+          "actual": [
+            "personalData",
+            "sensitivePersonalData",
+            "specialCategoryPersonalData"
+          ]
+        },
+        {
+          "policyIds": [
+            "https://accomplish.org/policies/gdpr-policies/gdpr-article_15"
+          ],
+          "name": "completeness",
+          "status": "pass",
+          "details": "Constraint satisfied.",
+          "source": "completeness",
+          "operator": "eq",
+          "expected": 1,
+          "actual": 1
+        },
+        {
+          "policyIds": [
+            "https://accomplish.org/policies/gdpr-policies/gdpr-article_15"
+          ],
+          "name": "conciseness",
+          "status": "pass",
+          "details": "Constraint satisfied.",
+          "source": "conciseness",
+          "operator": "eq",
+          "expected": 1,
+          "actual": 1
+        },
+        {
+          "policyIds": [
+            "https://accomplish.org/policies/gdpr-policies/gdpr-article_20"
+          ],
+          "name": "dataControllers",
+          "status": "pass",
+          "details": "Constraint satisfied.",
+          "source": "dataControllers",
+          "operator": "in",
+          "expected": [
+            "datacontroller",
+            "destinationdatacontroller"
+          ],
+          "actual": [
+            "datacontroller",
+            "destinationdatacontroller"
+          ]
+        },
+        {
+          "policyIds": [
+            "https://accomplish.org/policies/gdpr-policies/gdpr-article_15"
+          ],
+          "name": "dataSource",
+          "status": "pass",
+          "details": "Constraint satisfied.",
+          "source": "dataSource",
+          "operator": "eq",
+          "expected": "dataSubjectDataSource",
+          "actual": "dataSubjectDataSource"
+        },
+        {
+          "policyIds": [
+            "https://accomplish.org/policies/gdpr-policies/gdpr-article_20"
+          ],
+          "name": "dataSource",
+          "status": "pass",
+          "details": "Constraint satisfied.",
+          "source": "dataSource",
+          "operator": "eq",
+          "expected": "dataSubjectDataSource",
+          "actual": "dataSubjectDataSource"
+        },
+        {
+          "policyIds": [
+            "https://accomplish.org/policies/gdpr-policies/gdpr-article_20"
+          ],
+          "name": "dataSource",
+          "status": "pass",
+          "details": "Constraint satisfied.",
+          "source": "dataSource",
+          "operator": "eq",
+          "expected": "dataSubjectDataSource",
+          "actual": "dataSubjectDataSource"
+        },
+        {
+          "policyIds": [
+            "https://accomplish.org/policies/gdpr-policies/gdpr-article_15"
+          ],
+          "name": "documentedProcedures",
+          "status": "pass",
+          "details": "Constraint satisfied.",
+          "source": "documentedProcedures",
+          "operator": "eq",
+          "expected": "proceduresForResponsesAndNotifications",
+          "actual": "proceduresForResponsesAndNotifications"
+        },
+        {
+          "policyIds": [
+            "https://accomplish.org/policies/gdpr-policies/gdpr-article_20"
+          ],
+          "name": "dqvJustifications",
+          "status": "pass",
+          "details": "Constraint satisfied.",
+          "source": "dqvJustifications",
+          "operator": "isAnyOf",
+          "expected": [
+            "delayJustification",
+            "nonFulfilmentJustification"
+          ],
+          "actual": [
+            "delayJustification"
+          ]
+        },
+        {
+          "policyIds": [
+            "https://accomplish.org/policies/gdpr-policies/gdpr-article_15"
+          ],
+          "name": "establishedCommunicationChannels",
+          "status": "pass",
+          "details": "Constraint satisfied.",
+          "source": "establishedCommunicationChannels",
+          "operator": "in",
+          "expected": [
+            "electronic",
+            "paper"
+          ],
+          "actual": [
+            "electronic",
+            "paper"
+          ]
+        },
+        {
+          "policyIds": [
+            "https://accomplish.org/policies/gdpr-policies/gdpr-article_15"
+          ],
+          "name": "humanInvolvement",
+          "status": "pass",
+          "details": "Constraint satisfied.",
+          "source": "humanInvolvement",
+          "operator": "eq",
+          "expected": "humanInvolvementForVerification",
+          "actual": "humanInvolvementForVerification"
+        },
+        {
+          "policyIds": [
+            "https://accomplish.org/policies/gdpr-policies/gdpr-article_15"
+          ],
+          "name": "impact",
+          "status": "pass",
+          "details": "Constraint satisfied.",
+          "source": "impact",
+          "operator": "eq",
+          "expected": "impactOnOthers",
+          "actual": "impactOnOthers"
+        },
+        {
+          "policyIds": [
+            "https://accomplish.org/policies/gdpr-policies/gdpr-article_20"
+          ],
+          "name": "impactOnDataSubjectOrDataSubjectGroup",
+          "status": "pass",
+          "details": "Constraint satisfied.",
+          "source": "impactOnDataSubjectOrDataSubjectGroup",
+          "operator": "eq",
+          "expected": "impactHarmful",
+          "actual": "impactHarmful"
+        },
+        {
+          "policyIds": [
+            "https://accomplish.org/policies/gdpr-policies/gdpr-article_20"
+          ],
+          "name": "impactOnDataSubjectOrDataSubjectGroup",
+          "status": "pass",
+          "details": "Constraint satisfied.",
+          "source": "impactOnDataSubjectOrDataSubjectGroup",
+          "operator": "eq",
+          "expected": "impactHarmful",
+          "actual": "impactHarmful"
+        },
+        {
+          "policyIds": [
+            "https://accomplish.org/policies/gdpr-policies/gdpr-article_15"
+          ],
+          "name": "justifications",
+          "status": "pass",
+          "details": "Constraint satisfied.",
+          "source": "justifications",
+          "operator": "isAllOf",
+          "expected": [
+            "automatedDecisionLogic",
+            "dataTransfersOutsideEu",
+            "complexityOfProcess"
+          ],
+          "actual": [
+            "automatedDecisionLogic",
+            "dataTransfersOutsideEu",
+            "complexityOfProcess"
+          ]
+        },
+        {
+          "policyIds": [
+            "https://accomplish.org/policies/gdpr-policies/gdpr-article_15"
+          ],
+          "name": "justifications",
+          "status": "pass",
+          "details": "Constraint satisfied.",
+          "source": "justifications",
+          "operator": "neq",
+          "expected": [
+            "highVolumeOfProcesses",
+            "complexityOfProcess"
+          ],
+          "actual": [
+            "automatedDecisionLogic",
+            "dataTransfersOutsideEu",
+            "complexityOfProcess"
+          ]
+        },
+        {
+          "policyIds": [
+            "https://accomplish.org/policies/gdpr-policies/gdpr-article_20"
+          ],
+          "name": "legalBases",
+          "status": "pass",
+          "details": "Constraint satisfied.",
+          "source": "legalBases",
+          "operator": "isAnyOf",
+          "expected": [
+            "a61A",
+            "a61B"
+          ],
+          "actual": [
+            "a61A",
+            "jointDataControllersAgreement"
+          ]
+        },
+        {
+          "policyIds": [
+            "https://accomplish.org/policies/gdpr-policies/gdpr-article_20"
+          ],
+          "name": "legalBases",
+          "status": "pass",
+          "details": "Constraint satisfied.",
+          "source": "legalBases",
+          "operator": "neq",
+          "expected": "a61E",
+          "actual": [
+            "a61A",
+            "jointDataControllersAgreement"
+          ]
+        },
+        {
+          "policyIds": [
+            "https://accomplish.org/policies/gdpr-policies/gdpr-article_20"
+          ],
+          "name": "legalBases",
+          "status": "pass",
+          "details": "Constraint satisfied.",
+          "source": "legalBases",
+          "operator": "isAnyOf",
+          "expected": [
+            "a61A",
+            "a61B"
+          ],
+          "actual": [
+            "a61A",
+            "jointDataControllersAgreement"
+          ]
+        },
+        {
+          "policyIds": [
+            "https://accomplish.org/policies/gdpr-policies/gdpr-article_20"
+          ],
+          "name": "legalBases",
+          "status": "pass",
+          "details": "Constraint satisfied.",
+          "source": "legalBases",
+          "operator": "neq",
+          "expected": "a61E",
+          "actual": [
+            "a61A",
+            "jointDataControllersAgreement"
+          ]
+        },
+        {
+          "policyIds": [
+            "https://accomplish.org/policies/gdpr-policies/gdpr-article_20"
+          ],
+          "name": "legalBases",
+          "status": "pass",
+          "details": "Constraint satisfied.",
+          "source": "legalBases",
+          "operator": "eq",
+          "expected": "jointDataControllersAgreement",
+          "actual": [
+            "a61A",
+            "jointDataControllersAgreement"
+          ]
+        },
+        {
+          "policyIds": [
+            "https://accomplish.org/policies/gdpr-policies/gdpr-article_15"
+          ],
+          "name": "makeAvailable",
+          "status": "pass",
+          "details": "Constraint satisfied.",
+          "source": "makeAvailable",
+          "operator": "eq",
+          "expected": true,
+          "actual": true
+        },
+        {
+          "policyIds": [
+            "https://accomplish.org/policies/gdpr-policies/gdpr-article_15"
+          ],
+          "name": "makeAvailable",
+          "status": "pass",
+          "details": "Constraint satisfied.",
+          "source": "makeAvailable",
+          "operator": "eq",
+          "expected": true,
+          "actual": true
+        },
+        {
+          "policyIds": [
+            "https://accomplish.org/policies/gdpr-policies/gdpr-article_20"
+          ],
+          "name": "makeAvailableDuty",
+          "status": "pass",
+          "details": "Constraint satisfied.",
+          "source": "makeAvailableDuty",
+          "operator": "eq",
+          "expected": true,
+          "actual": true
+        },
+        {
+          "policyIds": [
+            "https://accomplish.org/policies/gdpr-policies/gdpr-article_20"
+          ],
+          "name": "mediaTypes",
+          "status": "pass",
+          "details": "Constraint satisfied.",
+          "source": "mediaTypes",
+          "operator": "isAnyOf",
+          "expected": [
+            "application/json",
+            "text/csv",
+            "application/xml"
+          ],
+          "actual": [
+            "application/json",
+            "text/csv"
+          ]
+        },
+        {
+          "policyIds": [
+            "https://accomplish.org/policies/gdpr-policies/gdpr-article_20"
+          ],
+          "name": "mediaTypes",
+          "status": "pass",
+          "details": "Constraint satisfied.",
+          "source": "mediaTypes",
+          "operator": "isAnyOf",
+          "expected": [
+            "application/json",
+            "text/csv",
+            "application/xml"
+          ],
+          "actual": [
+            "application/json",
+            "text/csv"
+          ]
+        },
+        {
+          "policyIds": [
+            "https://accomplish.org/policies/gdpr-policies/gdpr-article_20"
+          ],
+          "name": "notify",
+          "status": "pass",
+          "details": "Constraint satisfied.",
+          "source": "notify",
+          "operator": "eq",
+          "expected": true,
+          "actual": true
+        },
+        {
+          "policyIds": [
+            "https://accomplish.org/policies/gdpr-policies/gdpr-article_20"
+          ],
+          "name": "notify",
+          "status": "pass",
+          "details": "Constraint satisfied.",
+          "source": "notify",
+          "operator": "eq",
+          "expected": true,
+          "actual": true
+        },
+        {
+          "policyIds": [
+            "https://accomplish.org/policies/gdpr-policies/gdpr-article_15"
+          ],
+          "name": "payAmount",
+          "status": "pass",
+          "details": "Constraint satisfied.",
+          "source": "payAmount",
+          "operator": "lteq",
+          "expected": "20000000.00",
+          "actual": "20000000.00"
+        },
+        {
+          "policyIds": [
+            "https://accomplish.org/policies/gdpr-policies/gdpr-article_15"
+          ],
+          "name": "payAmount",
+          "status": "pass",
+          "details": "Constraint satisfied.",
+          "source": "payAmount",
+          "operator": "lteq",
+          "expected": "20000000.00",
+          "actual": "20000000.00"
+        },
+        {
+          "policyIds": [
+            "https://accomplish.org/policies/gdpr-policies/gdpr-article_20"
+          ],
+          "name": "payAmount",
+          "status": "pass",
+          "details": "Constraint satisfied.",
+          "source": "payAmount",
+          "operator": "lteq",
+          "expected": "20000000.00",
+          "actual": "20000000.00"
+        },
+        {
+          "policyIds": [
+            "https://accomplish.org/policies/gdpr-policies/gdpr-article_20"
+          ],
+          "name": "payAmount",
+          "status": "pass",
+          "details": "Constraint satisfied.",
+          "source": "payAmount",
+          "operator": "lteq",
+          "expected": "20000000.00",
+          "actual": "20000000.00"
+        },
+        {
+          "policyIds": [
+            "https://accomplish.org/policies/gdpr-policies/gdpr-article_15"
+          ],
+          "name": "recipients",
+          "status": "pass",
+          "details": "Constraint satisfied.",
+          "source": "recipients",
+          "operator": "in",
+          "expected": [
+            "dataSubject",
+            "representative"
+          ],
+          "actual": [
+            "dataSubject",
+            "representative"
+          ]
+        },
+        {
+          "policyIds": [
+            "https://accomplish.org/policies/gdpr-policies/gdpr-article_20"
+          ],
+          "name": "review",
+          "status": "pass",
+          "details": "Constraint satisfied.",
+          "source": "review",
+          "operator": "eq",
+          "expected": true,
+          "actual": true
+        },
+        {
+          "policyIds": [
+            "https://accomplish.org/policies/gdpr-policies/gdpr-article_20"
+          ],
+          "name": "review",
+          "status": "pass",
+          "details": "Constraint satisfied.",
+          "source": "review",
+          "operator": "eq",
+          "expected": true,
+          "actual": true
+        },
+        {
+          "policyIds": [
+            "https://accomplish.org/policies/gdpr-policies/gdpr-article_20"
+          ],
+          "name": "review",
+          "status": "pass",
+          "details": "Constraint satisfied.",
+          "source": "review",
+          "operator": "eq",
+          "expected": true,
+          "actual": true
+        },
+        {
+          "policyIds": [
+            "https://accomplish.org/policies/gdpr-policies/gdpr-article_15"
+          ],
+          "name": "status",
+          "status": "pass",
+          "details": "Constraint satisfied.",
+          "source": "status",
+          "operator": "neq",
+          "expected": "requestActionDelayed",
+          "actual": "requestActionCompleted"
+        },
+        {
+          "policyIds": [
+            "https://accomplish.org/policies/gdpr-policies/gdpr-article_20"
+          ],
+          "name": "technicalMeasures",
+          "status": "pass",
+          "details": "Constraint satisfied.",
+          "source": "technicalMeasures",
+          "operator": "isAllOf",
+          "expected": [
+            "accessControlMethod",
+            "encryption",
+            "activityMonitoring",
+            "authorisationProtocols",
+            "securityMethod",
+            "api"
+          ],
+          "actual": [
+            "accessControlMethod",
+            "encryption",
+            "activityMonitoring",
+            "authorisationProtocols",
+            "securityMethod",
+            "api"
+          ]
+        },
+        {
+          "policyIds": [
+            "https://accomplish.org/policies/gdpr-policies/gdpr-article_20"
+          ],
+          "name": "technicalMeasures",
+          "status": "pass",
+          "details": "Constraint satisfied.",
+          "source": "technicalMeasures",
+          "operator": "isAllOf",
+          "expected": [
+            "accessControlMethod",
+            "encryption",
+            "activityMonitoring",
+            "authorisationProtocols",
+            "securityMethod",
+            "api"
+          ],
+          "actual": [
+            "accessControlMethod",
+            "encryption",
+            "activityMonitoring",
+            "authorisationProtocols",
+            "securityMethod",
+            "api"
+          ]
+        },
+        {
+          "policyIds": [
+            "https://accomplish.org/policies/gdpr-policies/gdpr-article_15"
+          ],
+          "name": "technicalOrganisationalMeasures",
+          "status": "pass",
+          "details": "Constraint satisfied.",
+          "source": "technicalOrganisationalMeasures",
+          "operator": "isAllOf",
+          "expected": [
+            "dataTransferRecord",
+            "dataProcessingRecord"
+          ],
+          "actual": [
+            "dataTransferRecord",
+            "dataProcessingRecord",
+            "dataTransferTool"
+          ]
+        },
+        {
+          "policyIds": [
+            "https://accomplish.org/policies/gdpr-policies/gdpr-article_20"
+          ],
+          "name": "technicalOrganisationalMeasures",
+          "status": "pass",
+          "details": "Constraint satisfied.",
+          "source": "technicalOrganisationalMeasures",
+          "operator": "eq",
+          "expected": "dataTransferTool",
+          "actual": [
+            "dataTransferRecord",
+            "dataProcessingRecord",
+            "dataTransferTool"
+          ]
+        },
+        {
+          "policyIds": [
+            "https://accomplish.org/policies/gdpr-policies/gdpr-article_20"
+          ],
+          "name": "technicalOrganisationalMeasures",
+          "status": "pass",
+          "details": "Constraint satisfied.",
+          "source": "technicalOrganisationalMeasures",
+          "operator": "eq",
+          "expected": "dataTransferTool",
+          "actual": [
+            "dataTransferRecord",
+            "dataProcessingRecord",
+            "dataTransferTool"
+          ]
+        },
+        {
+          "policyIds": [
+            "https://accomplish.org/policies/gdpr-policies/gdpr-article_15"
+          ],
+          "name": "time",
+          "status": "pass",
+          "details": "Constraint satisfied.",
+          "source": "time",
+          "operator": "lte",
+          "expected": "P1M",
+          "actual": "P1M"
+        },
+        {
+          "policyIds": [
+            "https://accomplish.org/policies/gdpr-policies/gdpr-article_20"
+          ],
+          "name": "transfer",
+          "status": "pass",
+          "details": "Constraint satisfied.",
+          "source": "transfer",
+          "operator": "eq",
+          "expected": true,
+          "actual": true
+        },
+        {
+          "policyIds": [
+            "https://accomplish.org/policies/gdpr-policies/gdpr-article_15"
+          ],
+          "name": "understandability",
+          "status": "pass",
+          "details": "Constraint satisfied.",
+          "source": "understandability",
+          "operator": "eq",
+          "expected": 1,
+          "actual": 1
+        }
+      ],
+      "nextActions": {
+        "review": [
+          "availability"
+        ]
+      },
+      "verdict": "non-compliant"
+    }
+  ]
+}

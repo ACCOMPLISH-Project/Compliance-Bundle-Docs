@@ -8,7 +8,7 @@ These are the attributes that the ACAS will need to extract from the Scenario De
 ```json
 {
     "contains_pii": True,
-    "contains_special_catagories": True|False,
+    "contains_special_categories": True|False,
     "collection_method": "Direct"|"Indirect",
     "user": id or string or something,
     "is_controller": True|False
@@ -40,7 +40,7 @@ TBD
     "scope": {
         "gdpr": false | {
             "contains_pii": true, // true if the user uploaded a form, if not, run pii_check in anonymization <- Hook for Automation Engine
-            "contains_special_catagories": true, // false, // Comes from Data Ingestion OR pii_check
+            "contains_special_categories": true, // false, // Comes from Data Ingestion OR pii_check
             "collection_method": "Direct", // | "Indirect", // Comes from Data Ingestion? Forms Manager?
             "is_controller": "boolean" // Comes from Data Ingestion
             "additional_info": {
@@ -48,7 +48,7 @@ TBD
             }
         }, 
         "ai-act": false | {
-            "risk-level": "Minimal", // |"Limited"|"High"|"Unacceptable" // Comes from Model Training Service
+            "risk-level": "high_risk"|"medium_risk"|"low_risk" // Comes from Model Training Service
             "additional_info": {
                 // 
             }

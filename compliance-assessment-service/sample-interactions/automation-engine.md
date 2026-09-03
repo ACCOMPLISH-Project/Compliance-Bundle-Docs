@@ -17,7 +17,7 @@ These are the attributes that the ACAS will need to extract from the Scenario De
 ### AI Act
 ```json
 {
-    "risk-level": "Minimal"|"Limited"|"High"|"Unacceptable"
+    "risk-level": "high_risk"|"medium_risk"|"low_risk"
 }
 ```
 ### Data Act
